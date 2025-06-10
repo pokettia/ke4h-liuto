@@ -1,0 +1,13 @@
+<h2>Query SPARQL</h2>
+<pre><code>PREFIX arco: <https://w3id.org/arco/ontology/arco/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?instrument ?label
+WHERE {
+  ?instrument a arco:MusicalInstrument ;
+             rdfs:label ?label .
+  FILTER(REGEX(?label, "liuto", "i"))
+}
+LIMIT 50
+</code></pre>
+<p>Questa query estrae strumenti musicali etichettati come "liuto".</p>

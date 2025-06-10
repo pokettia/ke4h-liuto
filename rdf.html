@@ -1,0 +1,10 @@
+<h2>Triple RDF Generate</h2>
+<pre><code>@prefix arco: <https://w3id.org/arco/ontology/arco/> .
+@prefix a-cd: <https://w3id.org/arco/ontology/context-description/> .
+@prefix ex: <http://example.org/> .
+
+ex:Liuto_Rinascimentale a arco:MusicalInstrument ;
+  rdfs:label "Liuto rinascimentale" ;
+  a-cd:hasContext ex:ContestoNobiliare, ex:ContestoReligioso ;
+  a-cd:hasSubject ex:Madrigali .
+</code></pre>

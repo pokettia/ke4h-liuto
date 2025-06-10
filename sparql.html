@@ -1,14 +1,17 @@
 <h2>Query SPARQL</h2>
-<pre><code>PREFIX arco: <https://w3id.org/arco/ontology/arco/> ---qui uso il sito come database prendo le cose direttamenre dal sito
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+<pre><code>
+PREFIX arco: &lt;https://w3id.org/arco/ontology/arco/&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
 
 SELECT DISTINCT ?instrument ?label
 WHERE {
   ?instrument a arco:MusicalInstrument ;
-             rdfs:label ?label .
+              rdfs:label ?label .
   FILTER(REGEX(?label, "liuto", "i"))
 }
 LIMIT 50
 </code></pre>
-<p>allo questa query prende strumenti musicali etichettati come "liuto"nel sito di arco quindi basta cambiare la voce nella query</p>
-<t1>se ora C'è scritto "liuto" basta cambiare in "palle" per esempio. basta studiare il sito arco e cercare la voce giusta </t1>
+
+<p>Questa query recupera gli strumenti musicali etichettati come "liuto" dal sito di ArCo (Archivio del Catalogo). Utilizza direttamente i dati pubblicati dal sito.</p>
+
+<p>Per cercare un altro strumento, basta sostituire la parola "liuto" nella query con un'altra, ad esempio "palle" (ammesso che sia una voce valida nel dataset). È sufficiente esplorare il sito di ArCo per trovare le etichette corrette da usare nella query.</p>
